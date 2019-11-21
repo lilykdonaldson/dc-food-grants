@@ -53,6 +53,7 @@ body {
   padding-top: 0px;
   height: 500px; 
   overflow: auto;
+  border-bottom: 1px solid rgb(116, 116, 116);
   
 }
 #database-view table {
@@ -67,7 +68,7 @@ tr:first-child {
   font-size: large;
   font-weight: bold;
 }
-tr:nth-child(even) {background-color: #dadada;}
+/* tr:nth-child(even) {background-color: #dadada;} */
 
 tr:not(:first-child):hover {background-color: rgb(254, 255, 234);}
 
