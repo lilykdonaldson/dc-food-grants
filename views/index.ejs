@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>DC Food Grants</title> 
+    <link rel="stylesheet" type="text/css" href="/theme.css">
+    <script></script>
+  </head>
+  
+  <body>
+    <div class="header">
+      <a href="#default" class="logo">
+        <img style="vertical-align:middle" src="images/logo.png"> DC Food Grants</a>
+      <div class="header-right">
+      <a href="#home">Find a Grant</a>
+      <a href="#grants">All Grants</a>
+      <a href="#about">About</a>
+      <a class="button" href="#form">Add a Grant</a>
+      </div>
+  </div>
+    <div class="grey">
+      
+        <div id="grid">
+            <a href="#grants">
+      <h1> Find a Grant </br> <img src="images/arrow.png"></h1>
+    </a>
+    <a href="#grants">
+      <h1> About the Project </br> <img src="images/arrow.png"></h1>
+    </div>
+  </div>
+  </a>
+
+    <div class="grey2" id = "grants">
+      <h2>Grants</h2>
+      <div class="white">
+      <div id="grid">
+          <p>Selected(0)</p>
+          <div id="option1"><h3>Nonprofit</h3></div>
+          <div id="option2"><h3>Farmer's Market</h3></div>
+          <div id="option3"><h3>School</h3></div>
+          <div id="option4"><h3>Community Garden</h3></div>
+          <div id="option5"><h3>Place of Worship</h3></div>
+          <div id="option6"><h3>Other</h3></div>
+        </div>
+        </div>
+        <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for grants..">
+      <div id = "database-view">
+          <p><%-myHTML%></p>
+      </div>
+    </div>
+    <div id="about">
+      <h2>About</h2>
+    </div>
+    <!-- <div id="form">
+      <h2>Submit a Grant</h2>
+      <form>
+        Name <input type="text">
+        Provider <input type="text">
+        Deadline <input type="text">
+        Amount <input type="text">
+        </br>
+        Type
+        <input type="radio" name="Type" value="Grant"> Grant
+        <input type="radio" name="Type" value="Loan"> Loan
+        </br>
+        Categories
+        <input type="checkbox" name="category" value="nonprofit">Nonprofit
+        <input type="checkbox" name="category" value="farmers-market">Farmer's Market
+        <input type="checkbox" name="category" value="school">School
+        <input type="checkbox" name="category" value="community-arden">Community Garden
+        <input type="checkbox" name="category" value="place-of-worship">Place of Worship
+        <input type="checkbox" name="category" value="nonprofit">Nonprofit
+        <input type="checkbox" name="category" value="nonprofit">Nonprofit
+        <input type="submit">
+      </form>
+    </div> -->
+  </body>
+</html>
+
+<script>
+    function searchTable() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("scrolltable");
+      tr = table.getElementsByTagName("tr");
+    
+      for (i = 1; i < tr.length; i++) {
+        tr[i].style.display = "none";
+        for(var j=0; j<11; j++){
+        td = tr[i].getElementsByTagName("td")[j];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } 
+        }
+      }
+      }
+    }
+    </script>

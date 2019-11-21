@@ -1,0 +1,26 @@
+{
+  "name": "dc-food-grants",
+  "version": "1.0.0",
+  "description": "A site for accessing a food insecurity grants database",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilykdonaldson/dc-food-grants.git"
+  },
+  "author": "Lily K. Donaldson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilykdonaldson/dc-food-grants/issues"
+  },
+  "homepage": "https://github.com/lilykdonaldson/dc-food-grants#readme"
+}
